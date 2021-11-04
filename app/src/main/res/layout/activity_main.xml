@@ -10,16 +10,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="4"
         android:orientation="vertical"
 
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
            android:layout_weight="1"
-            android:weightSum="4"
+            android:weightSum="3"
+            android:background="@color/white"
             android:orientation="horizontal"
             >
             <Button
@@ -47,34 +47,26 @@
                 />
 
         </LinearLayout>
-<FrameLayout
-    android:id="@+id/list_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    >
-</FrameLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark">
 
-            <fragment
-                android:id="@+id/swich_area_for_fragments"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:name="com.example.dev.fragmentsexampleoct29.FirstFragment"
-                >
-            </fragment>
-        </LinearLayout>
+
+        <fragment
+            android:id="@+id/swich_area_for_fragments"
+            android:name="com.example.dev.fragmentsexampleoct29.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <FrameLayout
             android:id="@+id/add_remove_area"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
            android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@color/colorPrimary"
             >
             <TextView
                 android:textSize="20sp"
