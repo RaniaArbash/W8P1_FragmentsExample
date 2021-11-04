@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void swich_clicked(View view) {
         Fragment secondFragment = new SecondFragment();
+        //secondFragment.setArguments();
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
     public void second_swich_clicked(View view) {
 
         Fragment firstFragmentObject = new FirstFragment();
+
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
+
         transaction.replace(R.id.swich_area_for_fragments, firstFragmentObject);
         transaction.commit();
 
@@ -68,43 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void createDialgo(int textId) {
-        MyDialog newDialog = MyDialog.newInstant(textId);
-
-         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-         newDialog.show(transaction,"fragment");
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.helpmenu, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.helpinmenu:
-                this.createDialgo(R.string.help_text2);
-                break;
-            case R.id.list_fragment:
-                FragmentList newList = new FragmentList();
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.list_container, newList).commit();
-                break;
-        }
-        return true;
-    }
 
 
 
-    public void open_dialgo_fragment(View view) {
-        this.createDialgo(R.string.help_text);
-
-    }
 }

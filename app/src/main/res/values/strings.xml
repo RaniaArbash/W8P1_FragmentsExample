@@ -3,4 +3,9 @@
 
     <string name="help_text2">THis is diffrent text </string>
     <string name="help_text">If you need any help with fragment visit this site </string>
+
+    <string-array name="phones">
+        <item>iPhone</item>
+        <item>Windows</item>
+    </string-array>
 </resources>

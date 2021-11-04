@@ -16,7 +16,7 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
            android:layout_weight="1"
             android:weightSum="4"
@@ -45,14 +45,6 @@
                 android:text="add or remove fragment"
                 android:onClick="add_remove_fragment"
                 />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/openDialogFragment"
-                android:text="Alert Dialog"
-                android:layout_weight="1"
-                android:onClick="open_dialgo_fragment"
-                />
 
         </LinearLayout>
 <FrameLayout
@@ -61,7 +53,6 @@
     android:layout_height="match_parent"
     android:layout_weight="1"
     >
-
 </FrameLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,7 +66,6 @@
                 android:layout_height="match_parent"
                 android:name="com.example.dev.fragmentsexampleoct29.FirstFragment"
                 >
-
             </fragment>
         </LinearLayout>
 
@@ -87,6 +77,7 @@
             android:background="@color/white"
             >
             <TextView
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Here inside frame layout"
